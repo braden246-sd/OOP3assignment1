@@ -40,7 +40,7 @@ public abstract class Product
 		 * if product 1 difference is 25 and product 2 difference is 75 Double.compare(25, 75) returns a negative number
 		 */
 	public String toString() {
-		return getClass().getSimpleName() + "Original Price: " + originalPrice + " Updated Price: " + updatedPrice + " real Difference " + calcRealDiff();
+		return getClass().getSimpleName() + " Original Price: " + originalPrice + " Updated Price: " + updatedPrice + " real Difference " + calcRealDiff();
 	}
 	}
 

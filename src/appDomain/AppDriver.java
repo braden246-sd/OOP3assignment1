@@ -1,39 +1,35 @@
 package appDomain;
-import products.Product;
-import utilities.FileLoader;
 
-/**
- * <p>
- * This application driver code is designed to be used as a basis for the
- * Complexity and Sorting assignment that will be developed in the CPRG304 
- * class at SAIT. The implementors of this applications will be required
- * to add all the correct functionality.
- * </p>
- */
+import products.Product;
+import utilities.BubbleSort;
+import utilities.FileLoader;
+import utilities.OriginalPriceComparator;
+
 public class AppDriver
 {
-	/**
-	 *  The main method is the entry point of the application.
-	 *  
-	 *  @param args The input to control the execution of the application.
-	 */
-	public static void main( String[] args )
-	{
-		try
-	    {
-	        Product[] products =
-	                FileLoader.loadProducts("res/products1.txt");
+    public static void main(String[] args)
+    {
+        try
+        {
+            // Load all products from the file
+            Product[] products =
+                    FileLoader.loadProducts(
+                            "res/products1.txt");
 
-	        for(Product product : products)
-	        {
-	            System.out.println(product);
-	        }
-	    }
-	    catch(Exception e)
-	    {
-	        e.printStackTrace();
+            // Sort by original price (largest to smallest)
+            BubbleSort.sort(
+                    products,
+                    new OriginalPriceComparator());
 
-	    }
-
-	}
+            // Display sorted products
+            for(Product product : products)
+            {
+                System.out.println(product);
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
 }
