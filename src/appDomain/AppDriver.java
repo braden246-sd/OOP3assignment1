@@ -45,6 +45,8 @@ public class AppDriver
 			throw new IllegalArgumentException("Invalid compare type");
 		}
 		
+		long startTime = System.nanoTime();
+		
 		switch(sortType) {
 		case 'b': BubbleSort.sort(products, comparator);
 			break;
@@ -67,10 +69,16 @@ public class AppDriver
 			throw new IllegalArgumentException("Invalid sort type");
 		}
 		
+		long endTime = System.nanoTime();
+		
+		long nanoExecutionTime = endTime - startTime;
+		double miliExecutionTime = nanoExecutionTime * 0.000001;
+		
 		for(Product product : products ) {
 			System.out.println(product);
 		}
-		
+		System.out.println("Execution Time: " + miliExecutionTime + " Milliseconds");
+		System.out.println();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
