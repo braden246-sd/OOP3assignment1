@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import products.*; //imports all products classes
-
+//created by Braden Ouellet October 2026
 public class FileLoader {
 	
 	public static Product[] loadProducts(String fileName) throws FileNotFoundException {

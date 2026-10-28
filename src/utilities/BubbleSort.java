@@ -3,7 +3,7 @@ import java.util.Comparator;
 import products.Product;
 
 //bubble sorting repeatedly compares neighboring values 
-
+//created by Braden Ouellet october 2026
 public class BubbleSort {
 	public static void sort(Product[] products, Comparator<Product> comparator) {
 		for(int pass = 0; pass < products.length -1; pass ++) {
