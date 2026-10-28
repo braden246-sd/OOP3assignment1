@@ -32,12 +32,16 @@ public abstract class Product
 	@Override 
 	public int compareTo(Product other) {
 		return Double.compare(this.calcRealDiff(), other.calcRealDiff());
+	}
 		
 		/*
 		 * if Double.compare returns a negative number the product is smaller, zero the products are 
 		 * equal and a positive number this product is larger 
 		 * if product 1 difference is 25 and product 2 difference is 75 Double.compare(25, 75) returns a negative number
 		 */
+	public String toString() {
+		return getClass().getSimpleName() + "Original Price: " + originalPrice + " Updated Price: " + updatedPrice + " real Difference " + calcRealDiff();
+	}
 	}
 
-}
+

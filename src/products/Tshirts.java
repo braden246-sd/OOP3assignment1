@@ -3,8 +3,8 @@ package products;
 //see jeans.java for any explanation these are all basically the same
 
 
-public class Tshirts extends Product {
-	public Tshirts (double originalPrice, double updatedPrice) {
+public class TShirts extends Product {
+	public TShirts (double originalPrice, double updatedPrice) {
 		super (originalPrice, updatedPrice);
 	}
 	

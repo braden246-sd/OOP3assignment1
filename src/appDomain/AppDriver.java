@@ -1,4 +1,6 @@
 package appDomain;
+import products.Product;
+import utilities.FileLoader;
 
 /**
  * <p>
@@ -17,7 +19,21 @@ public class AppDriver
 	 */
 	public static void main( String[] args )
 	{
+		try
+	    {
+	        Product[] products =
+	                FileLoader.loadProducts("res/products1.txt");
+
+	        for(Product product : products)
+	        {
+	            System.out.println(product);
+	        }
+	    }
+	    catch(Exception e)
+	    {
+	        e.printStackTrace();
+
+	    }
 
 	}
-
 }

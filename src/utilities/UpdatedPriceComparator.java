@@ -1,6 +1,8 @@
 package utilities;
 import java.util.Comparator;
 import products.Product;
+//created by Braden Ouellet October 2026
+
 
 public class UpdatedPriceComparator implements Comparator<Product>{
 	
