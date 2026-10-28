@@ -3,6 +3,7 @@
 package products;
 
 public class Jeans extends Product {
+	//all the subclasses jeans tshirt etc are basically the same except for the adjustment amount
 	
 	public Jeans(double originalPrice, double updatedPrice) {
 		super(originalPrice, updatedPrice); //super calls the parent constructor 
@@ -14,6 +15,7 @@ public class Jeans extends Product {
 		
 		//for jeans the adjustment is 0.5
 		// Adjustment * Absolute value of (Original Price - Updated Price) - from assignment 
+		
 	}
 
 }
