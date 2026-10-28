@@ -25,6 +25,10 @@ public class AppDriver
 		String fileName = "res/products1.txt";
 		char compareType = 'o';
 		char sortType ='m';
+		System.out.println("File: " + fileName);
+		System.out.println("Comparator: " + compareType);
+		System.out.println("Sort: " + sortType);
+		System.out.println();
 		
 		Product[] products = FileLoader.loadProducts(fileName);
 		Comparator<Product> comparator;
@@ -47,18 +51,24 @@ public class AppDriver
 		case 'm': MergeSort.sort(products, comparator);
 			break;
 		case 'i': 
-			//placeholder for algorithm
+			// InsertionSort.sort(products, comparator);
 			break;
 		case 's':
+			// SelectionSort.sort(products, comparator);
 			break;
 		case 'q':
+			// QuickSort.sort(products, comparator);
 			break;
 		case 'z': 
+			// HeapSort.sort(products, comparator);
 			break;
+		
+		default: 
+			throw new IllegalArgumentException("Invalid sort type");
 		}
 		
 		for(Product product : products ) {
-			System.out.print(products);
+			System.out.println(product);
 		}
 		
 		}

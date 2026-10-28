@@ -2,7 +2,9 @@ package utilities;
 import java.util.Comparator;
 import products.Product;
 
-public class MergeSort { //splits up pieces then merges
+//created by Braden Ouellet october 2026
+//Merge two already sorted half into one sorted section
+public class MergeSort {
 	public static void sort(Product[] products, Comparator<Product> comparator) {
 		mergeSort(products, 0, products.length -1, comparator);
 	}
