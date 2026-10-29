@@ -33,7 +33,7 @@ public class FileLoader {
 			switch(type) {
 				case "Jeans": products[index] = new Jeans(originalPrice, updatedPrice);
 					break;
-				case "Tshirts": products[index] = new TShirts(originalPrice, updatedPrice);
+				case "TShirts": products[index] = new TShirts(originalPrice, updatedPrice);
 					break;
 				case "Skirts": products[index] = new Skirts(originalPrice, updatedPrice);
 					break;
@@ -46,6 +46,7 @@ public class FileLoader {
 				case "Shoes": products[index] = new Shoes(originalPrice, updatedPrice);
 				break;
 				
+				
 				//pretty simple switch(type) just asks what product did we just read 
 				//if type = jeans then Java executes products[index] ....
 				//which becomes products index new Jeans(54.46, 63.25)
@@ -53,6 +54,15 @@ public class FileLoader {
 			index++; //without this products[0] would be overwritten over and over again, each product gets its own position
 		}
 			input.close();
+			
+			for(int i = 0; i < products.length; i++)
+			{
+			    if(products[i] == null)
+			    {
+			        System.out.println(
+			            "Null product at index " + i);
+			    }
+			}
 			
 			return products;
 		

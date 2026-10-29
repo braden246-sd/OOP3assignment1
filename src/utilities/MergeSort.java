@@ -43,6 +43,7 @@ public class MergeSort {
 		int k = left; //tracks where we are writing into
 		
 		while(i < leftSize && j < rightSize) {
+			
 			//as long as both sides have something left we compare them
 			if(comparator.compare(leftArray[i], rightArray[j]) >= 0) {
 				//compare (a,b) returns positive if a larger 0 if equal and negative if b larger
